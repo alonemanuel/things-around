@@ -1,0 +1,110 @@
+@font-face {
+  font-family: SimplerMono;
+  font-weight: 400;
+  src: url(assets/fonts/simpler_mono_hagilda/SimplerPro_HLAR_Mono-Regular.woff);
+}
+@font-face {
+  font-family: SimplerMono;
+  font-weight: 500;
+  src: url(assets/fonts/simpler_mono_hagilda/SimplerPro_HLAR_Mono-Medium.woff);
+}
+@font-face {
+  font-family: SimplerMono;
+  font-weight: 700;
+  src: url(assets/fonts/simpler_mono_hagilda/SimplerPro_HLAR_Mono-Bold.woff);
+}
+
+/* Variables */
+:root {
+  --important: red !important;
+  --tiny-padding: 0.3rem;
+  --small-padding: 0.7rem;
+  --big-padding: 1.5rem;
+  --small-mono-font: 400 1rem/1.2rem SimplerMono;
+  --accent-color: #b275fe;
+  --base-font-size: 12px;
+  --gradient-size: 73%;
+}
+style.css
+  style.css
+  /* Reset rules */
+  
+  *,
+  *::before,
+  *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  /* TODO: Check how to use this. */
+  /* color-scheme: dark light; */
+  font-size: var(--base-font-size);
+}
+
+body {
+  min-width: 100vw;
+  font: var(--small-mono-font);
+  color: var(--accent-color);
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Utilities */
+
+header {
+  color: white;
+  padding: var(--tiny-padding) var(--small-padding);
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--tiny-padding);
+}
+
+header > * {
+  background-image: linear-gradient(
+    to right,
+    transparent var(--gradient-size),
+    var(--accent-color) 100%
+  );
+}
+
+header :last-child {
+  margin-inline-start: var(--big-padding);
+  /* text-indent: var(--big-padding); */
+}
+
+.trail {
+  position: absolute;
+  height: 3px;
+  width: 3px;
+  background: black;
+  border-radius: 2px;
+  background: black;
+}
+
+main {
+  padding: var(--small-padding);
+  margin-top: var(--big-padding);
+}
+
+main > * :first-child::before {
+  content: ">";
+}
+
+main > * {
+  /* text-indent: var(--big-padding); */
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
