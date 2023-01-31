@@ -215,11 +215,14 @@ function setOnClick(clicked, elem, content) {
     if (lastPressed) {
       lastPressed.classList.remove('selected');
     }
+    console.debug('/n');
+    console.debug(`last pressed: ${lastPressed}`);
+    console.debug(`clicked: ${clicked}`);
+    if (lastPressed != elem || content.style.display == 'none') {
+      elem.classList.add('selected');
+      // e.currentTarget.style.color = 'red';
+    }
     lastPressed = elem;
-    elem.classList.add('selected');
-    // e.currentTarget.style.color = 'red';
-    console.debug(content);
-    console.debug(content.style.display);
     content.style.display = (getComputedStyle(content).display == 'none') ? 'block' : 'none';
     // for (let child of content.children) {
     // child.classList.add('selected');
