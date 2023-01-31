@@ -1,0 +1,113 @@
+@font-face {
+  font-family: ABCDiatype;
+  src: url(../assets/fonts/ABCDiatype-Regular-Trial.woff2);
+}
+
+body {
+  font-family: "ABCDiatype";
+  font-size: 18px;
+  margin: 2em 8em;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 4em;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+.links-section {
+    display: flex;
+    gap: 2em;
+}
+
+.links-section a:hover {
+    text-decoration-line: underline;
+    text-underline-offset: 0.5em;
+    color: black;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.about-text {
+    padding-inline-start: 4em;
+    font-weight: 400;
+    font-size: 1.5em;
+
+}
+
+.bottom-p {
+    padding-inline-start: -4em;
+    font-weight: 900;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8em;
+}
+
+
+.person-quote {
+    margin: 0;
+    font-size: 3em;
+}
+
+.person-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.person-name {
+    padding-left: 4em;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin: 0.5em;
+
+}
+
+a:hover {
+    color: #666666;
+}
+
+.people-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* margin: 0em 6em; */
+    gap: 6em 3.5em;
+
+}
+
+.person-image {
+    max-width: 100%;
+    border-radius: 3px;
+    filter: grayscale();
+}
+
+.person-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2em;
+    align-items: flex-start;
+}
+
+.people-grid .person-name {
+    margin: 0;
+    padding: 0;
+    text-align: end;
+
+}
+.person-image:hover {
+    filter: none;
+}

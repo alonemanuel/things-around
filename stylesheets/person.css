@@ -1,0 +1,85 @@
+@font-face {
+  font-family: ABCDiatype;
+  src: url(../assets/fonts/ABCDiatype-Regular-Trial.woff2);
+}
+
+body {
+  font-family: "ABCDiatype";
+  color: white;
+  font-size: 18px;
+  margin: 2em 8em;
+  background-color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 4em;
+}
+
+.links-section {
+    display: flex;
+    gap: 2em;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.links-section a:hover {
+    text-decoration-line: underline;
+    text-underline-offset: 0.5em;
+    color: white;
+}
+
+main {
+    /* display: flex; */
+    flex-direction: column;
+    gap: 5em;
+}
+
+
+.person-quote {
+    margin: 0;
+    font-size: 3em;
+}
+
+.person-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.person-name {
+    padding-left: 4em;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin: 0.5em;
+
+}
+
+a:hover {
+    color: #666666;
+}
+
+.image-grid {
+    margin: 0em 6em;
+    display: grid;
+    gap: 6em;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.img-item {
+}
+
+.img-item img {
+    max-width: 100%;
+    border-radius: 2px;
+}
+
+.info-section {
+    padding-top: 4em;
+    font-size: 1.5em;
+    font-weight: 900;
+}

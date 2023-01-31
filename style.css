@@ -17,11 +17,13 @@
 /* Variables */
 :root {
   --important: red !important;
+  --mono-family: SimplerMono 
+
   --tiny-padding: 0.3rem;
   --small-padding: 0.7rem;
   --big-padding: 1.5rem;
   --small-mono-font: 400 1rem/1.2rem SimplerMono;
-  --accent-color: #b275fe;
+  --accent-color: black;
   --base-font-size: 12px;
   --gradient-size: 73%;
 }
@@ -99,12 +101,78 @@ main {
   margin-top: var(--big-padding);
 }
 
-main > * :first-child::before {
+/* main > * :first-child::before {
   content: ">";
-}
+} */
 
 main > * {
   /* text-indent: var(--big-padding); */
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  /* grid-template-columns: 2fr 3fr; */
+}
+
+ul li,
+ul span {
+  padding-right: 20px;
+}
+
+input {
+  list-style-type: none;
+}
+.input-span {
+  display: block;
+}
+
+li {
+  list-style-type: none;
+  display: block;
+}
+
+input {
+  width: 10ch;
+  border-style: none;
+  /* border-bottom: solid 2px ; */
+  cursor: auto;
+}
+
+/* ul > * > * :not(.ul) ::before {
+  content: ">";
+} */
+
+
+li > h2::before,
+.input-span::before{
+  /* content: "> \00a0"; */
+  content: ">";
+  margin-left: 0.5rem;
+}
+
+/* .input-span::before {
+  content: ">";
+} */
+
+::selection {
+  color: white;
+  background-color: red;
+}
+
+.selected h2,
+.selected input {
+  color: white;
+  background-color: blue;
+
+}
+
+h2 {
+  display: inline-block;
+}
+
+
+ul {
+  display: none;
+  transition: max-height 0.2s ease-out;
+}
+
+* {
+  cursor: default;
 }
