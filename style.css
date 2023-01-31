@@ -17,14 +17,15 @@
 /* Variables */
 :root {
   --important: red !important;
-  --mono-family: SimplerMono 
+  --mono-family: SimplerMono; 
 
   --tiny-padding: 0.3rem;
   --small-padding: 0.7rem;
   --big-padding: 1.5rem;
   --small-mono-font: 400 1rem/1.2rem SimplerMono;
   --accent-color: black;
-  --base-font-size: 12px;
+  --theme-color: blue;
+  --base-font-size: 16px;
   --gradient-size: 73%;
 }
 style.css
@@ -159,8 +160,18 @@ li > h2::before,
 .selected h2,
 .selected input {
   color: white;
-  background-color: blue;
+  background-color: var(--theme-color);
 
+}
+
+input:focus-visible {
+  outline-color: var(--theme-color);
+  outline-offset: 1px;
+  background-color: transparent;
+  outline-style: solid;
+  color: var(--theme-color);
+  border-radius: 0;
+  /* background-color: red !important; */
 }
 
 h2 {
